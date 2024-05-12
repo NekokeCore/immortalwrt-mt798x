@@ -90,12 +90,15 @@ mediatek_setup_interfaces()
 	nradio,wt9103)
 		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3 lan4" eth1
 		;;
+<<<<<<< HEAD
 	routerich,ax3000)
 		ucidef_set_interfaces_lan_wan "eth0" "eth1"
 		ucidef_add_switch "switch0" \
 			"0:lan:1" "2:lan:2" "3:lan:3" "4:wan" "6u@eth0" "5u@eth1"
 		;;
 	ikuai,q3000 |\
+=======
+>>>>>>> 8da318c2f2 (mediatek: add support for Ruijie RG-X30E and Ruijie RG-X30E Pro)
 	ruijie,rg-x30e*)
 		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3" wan
 		;;
@@ -256,6 +259,7 @@ mediatek_setup_macs()
 		label_mac=$wan_mac
 		local wifi_mac="$(mtd_get_mac_binary $part_name 0x04)"
 		;;
+<<<<<<< HEAD
 	routerich,ax3000)
 		local wifi_mac="$(mtd_get_mac_binary $part_name 0x4)"
 		label_mac=$(macaddr_add $wifi_mac -2)
@@ -271,6 +275,8 @@ mediatek_setup_macs()
 		wan_mac=$(mtd_get_mac_binary $part_name 0x10048)
 		lan_mac=$(macaddr_add $wan_mac 1)
 		;;
+=======
+>>>>>>> 8da318c2f2 (mediatek: add support for Ruijie RG-X30E and Ruijie RG-X30E Pro)
 	ruijie,rg-x30e*)
 		label_mac=$(mtd_get_mac_ascii product_info ethaddr)
 		wan_mac=$label_mac
@@ -286,11 +292,14 @@ mediatek_setup_macs()
 			echo "MacAddress=$b1mac" >> ${b1dat}
 		fi
 		;;
+<<<<<<< HEAD
 	*newland,nl-wr8103*)
 		local wifi_mac=$(mtd_get_mac_binary Factory 0x4)
 		lan_mac=$(macaddr_add $wifi_mac -1)
 		wan_mac=$(macaddr_add $wifi_mac -2)
 		;;
+=======
+>>>>>>> 8da318c2f2 (mediatek: add support for Ruijie RG-X30E and Ruijie RG-X30E Pro)
 	*)
 		wan_mac=$(mtd_get_mac_binary $part_name $wan_mac_offset)
 		lan_mac=$(mtd_get_mac_binary $part_name $lan_mac_offset)
