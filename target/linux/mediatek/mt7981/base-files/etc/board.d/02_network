@@ -90,15 +90,12 @@ mediatek_setup_interfaces()
 	nradio,wt9103)
 		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3 lan4" eth1
 		;;
-<<<<<<< HEAD
 	routerich,ax3000)
 		ucidef_set_interfaces_lan_wan "eth0" "eth1"
 		ucidef_add_switch "switch0" \
 			"0:lan:1" "2:lan:2" "3:lan:3" "4:wan" "6u@eth0" "5u@eth1"
 		;;
 	ikuai,q3000 |\
-=======
->>>>>>> 8da318c2f2 (mediatek: add support for Ruijie RG-X30E and Ruijie RG-X30E Pro)
 	ruijie,rg-x30e*)
 		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3" wan
 		;;
