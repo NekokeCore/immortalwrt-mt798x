@@ -738,6 +738,7 @@ setup_model()
 	netcore,n60 |\
 	glinet,gl-mt6000|\
 	ruijie,rg-x60-pro* |\
+	ruijie,ew-6000gx-pro* |\
 	jdcloud,re-cp-03 |\
 	tplink,tl-xdr608* |\
 	zyxel,ex5700 |\

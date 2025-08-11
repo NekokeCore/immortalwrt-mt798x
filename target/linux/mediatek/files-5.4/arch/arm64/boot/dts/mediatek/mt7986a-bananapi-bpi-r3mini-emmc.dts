@@ -131,6 +131,7 @@
 			compatible = "ethernet-phy-id03a2.a411";
 			/* PHY Address */
 			reg = <14>;
+			airoha,pnswap-rx;
 			reset-gpios = <&pio 49 1>;     /* GPIO49 */
 			reset-assert-us = <10000>;
 			reset-deassert-us = <20000>;
@@ -144,6 +145,7 @@
 			compatible = "ethernet-phy-id03a2.a411";
 			/* PHY Address */
 			reg = <15>;
+			airoha,pnswap-rx;
 			reset-gpios = <&pio 47 1>;     /* GPIO47 */
 			reset-assert-us = <10000>;
 			reset-deassert-us = <20000>;

@@ -1,0 +1,26 @@
+diff -urN a/drivers/net/phy/Kconfig b/drivers/net/phy/Kconfig
+--- a/drivers/net/phy/Kconfig	2022-03-26 16:28:40.211133235 +0800
++++ b/drivers/net/phy/Kconfig	2022-03-26 16:30:52.637025198 +0800
+@@ -595,6 +595,11 @@
+ 	  the Reduced Gigabit Media Independent Interface(RGMII) between
+ 	  Ethernet physical media devices and the Gigabit Ethernet controller.
+ 
++config AIR_EN8811H_PHY
++	tristate "Drivers for Airoha EN8811H 2.5 Gigabit PHY"
++	---help---
++	  Currently supports the Airoha EN8811H PHY.
++
+ endif # PHYLIB
+ 
+ config MICREL_KS8995MA
+diff -urN a/drivers/net/phy/Makefile b/drivers/net/phy/Makefile
+--- a/drivers/net/phy/Makefile	2022-03-26 16:28:57.619384439 +0800
++++ b/drivers/net/phy/Makefile	2022-03-26 16:31:40.893705848 +0800
+@@ -111,6 +111,7 @@
+ obj-$(CONFIG_TERANETICS_PHY)	+= teranetics.o
+ obj-$(CONFIG_VITESSE_PHY)	+= vitesse.o
+ obj-$(CONFIG_XILINX_GMII2RGMII) += xilinx_gmii2rgmii.o
++obj-$(CONFIG_AIR_EN8811H_PHY)   += air_en8811h.o
+ obj-$(CONFIG_MT753X_GSW)        += mtk/mt753x/
+ obj-$(CONFIG_RTL8367S_GSW)	+= rtk/
+ 
